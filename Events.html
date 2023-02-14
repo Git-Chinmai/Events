@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Events</title>
+	
+	<style>
+	
+	/*CSS variables section*/
+:root {
+color:white;
+background:  #ECECEC;
+}
+
+/*Extra Large screens - Extra large desktops*/
+
+/*General CSS and CSS reset*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.hero{
+    height:600px;
+    background-image: url("https://spaces.w3schools.com/images/hTv8aaPziOQ.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+    overflow: hidden;
+}
+.hero-description{
+    height: 600px;
+    background-color:rgba(4,7,32,0.7) ;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+
+    
+    
+}
+
+.hero-text{
+    width: 60%;
+}
+.hero-text p{
+    width: 70%;
+}
+ h2 {
+    height: 150px;
+        color: black;
+    display: flex;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    align-items:center;
+
+    
+}
+.hero-header{
+
+    margin-top: 120px;
+    padding-right: 50px;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 800;
+}
+.main{
+    width: 90%;
+    margin: auto;
+}
+.about{
+
+    overflow: hidden;
+    
+}
+
+.gallery{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+
+}
+
+.about-image-1{
+    height: 600px;
+    width: 500px;
+}
+.about-image-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-image-2{
+display: flex;
+height: 600px;
+flex-direction: column;
+justify-content: space-between;
+    
+
+}
+.image-list{
+    height: 280px;
+    width: 500px;
+}
+.image-list img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.poster-main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.poster-list{
+    width: 320px;
+    height: 400px;
+    position: relative;
+    margin:20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+.poster-list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.poster-text{
+    height:80px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    left:0;
+    background: transparent;
+    right: 0;
+    background:rgba(0,0,0,0.7);
+    
+    padding:20px
+    
+}
+.sponsor-main{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+.sponsor-image{
+    width: 15%;
+    padding: 30px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.sponsor-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.ticket-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ticket-list{
+    width:300px;
+    height: 350px;
+    margin:30px;
+    background-color: #ffffcc!important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    border:1px solid grey;
+    padding: 30px;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+.ticket-header{
+    color:black;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0px;
+    
+
+}
+.ticket-icon{
+    width:80px;
+    height: 80px;
+    margin:auto;
+}
+.ticket-text{
+    margin-top: 20px;
+}
+.ticket-text li{
+    font-size: 16px;
+    
+}
+
+.ticket-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+.ticket-price{
+    color:white;
+    position: absolute;
+    top:0px;
+    left:0px;
+    padding:10px 30px;
+     font-weight: 800;
+background: black;
+
+}
+.buy-ticket-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+label{
+    font-weight: 800;
+}
+form{
+    padding-top: 25px;
+}
+.buy-ticket-image
+{
+    width:400px;
+    height: 350px;
+}
+.buy-ticket-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.buy-ticket-form{
+    color:black;
+    margin:20px;
+}
+
+input{
+    padding:10px !important;
+    margin: 10px 0px;
+    height: 40px;
+    border:1px solid ;
+    width:60%;
+}
+/*MEDIA QUERIES*/
+/*Large screens - Desktop*/
+
+@media screen and (min-width: 1500px) {
+    .hero-text{
+        width: 60%;
+        
+    }
+    .about{
+        width:90%;
+    }
+    .about-image-1{
+        width: 30%;
+        
+    }
+    .about-image-2{
+    flex-direction: row;
+    width: 70%;
+    height: 600px;
+    
+    }
+
+    .image-list{
+        height: 600px;
+        margin:auto;
+        
+
+    }
+    
+    .gallery{
+        justify-content: center;
+    
+        
+    }
+    .about{
+        width: 90%;
+        margin: auto;
+    }
+
+}
+
+/*medium screens - Laptops*/
+@media screen and (max-width: 1024px) {
+    .about-image-1{
+        width: 100%;
+        height: 500px;
+    }
+    .image-list{
+        height: 240px;
+    }
+    .about-image-2{
+        height: 500px;
+        flex-direction: row;
+        width: 100%;
+    }
+    .image-list{
+        width: 100%;
+    }
+    .gallery{
+        justify-content: space-evenly;
+    }
+    .hero-text{
+        width: 70%;
+    }
+    .hero-header{
+        font-size: 45px;
+    }
+
+}
+
+/*Small screens - tablets*/
+@media screen and (max-width: 768px) {
+    
+    .about{
+        width: 90%;
+        margin: auto;
+    }
+    .about-image-1{
+        width: 100%;
+        height: 500px;
+        margin-bottom: 10px;
+
+
+    }
+    .about-image-2{
+        height: 250px;
+    }
+    .image-list{
+        width: 49%;
+        justify-content: space-between;
+    }
+    .about-image-2{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sponsor-image{
+        margin-bottom: 30px;
+    }
+    .hero-description{
+        justify-content: center;
+    }
+    .hero-text{
+        width:80%;
+    }
+    .hero-header{
+        font-size: 30px;
+    }
+     h2{
+        font-size: 30px;
+        height: 100px;
+    }
+    .poster-list{
+        width: 250px;
+    }
+    
+}
+
+/*Extra small screens - phones*/
+@media screen and (max-width: 480px) {
+    .gallery{
+        justify-content: center;
+    }
+    .about{
+        width:90%;
+        margin: auto;
+    }
+    .about-image-2{
+        height: 250px;
+    }
+    h2{
+        font-size: 30px;
+        height: 80px;
+    }
+    .hero-description{
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-text{
+        width:90%;
+    }
+    .poster-text h3{
+        font: 16px !important;
+    }
+    h3{
+        width: 100%;
+    }
+}
+.nav-item
+{
+padding : 10px;
+}
+.navbar-brand{
+	font-weight : bold;
+	
+	padding-left : 70px;
+	font-size : 40px;
+	color: #fff !important;
+	text-transform : capitalize;
+	}
+	
+
+	
+	</style>
+</head>
+<body>
+
+
+
+
+ <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    	 
+    <a class="navbar-brand " href="#"> VIIT-EVENTS </a>
+  </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+   
+    <ul class="navbar-nav ms-auto" >
+        <li class ="nav-item">
+           <a class ="nav-link" href=""> HOME</a> 
+        </li>
+        <li class ="nav-item">
+           <a class ="nav-link" href=""> GUESTS</a> 
+        </li>
+        <li class ="nav-item">
+           <a class ="nav-link" href=""> SPONSORS</a> 
+        </li>
+		<li class ="nav-item">
+           <a class ="nav-link" href=""> BOOK SEAT</a> 
+        </li>
+    </ul>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    CLUBS
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">ITSF</a></li>
+    <li><a class="dropdown-item" href="#">GFG</a></li>
+	 <li><a class="dropdown-item" href="#">ESSA</a></li>
+	  <li><a class="dropdown-item" href="#">MESA</a></li>
+	   <li><a class="dropdown-item" href="#">ACM</a></li>
+	    <li><a class="dropdown-item" href="#">EDC</a></li>
+	 
+  </ul>
+</div>
+</nav>
+</nav>
+
+
+    <main>
+        <div class="hero">
+         <div class="hero-description">
+        
+             <div class="hero-text">  
+                <h1 class="hero-header">
+                 <span style="color:#fff ">   From  </span ><span style="color:#FDB813 ">sun up to sun down,</span> <span style = " color:#fff">we have the best party in town.</span>
+                 </h1>
+                 <p style = "color:#fff">Sunday FEB 20</p>
+                 <p style = "color:#fff"><i class="fa fa-map-marker fa-fw w3-text-white w3-xlarge w3-margin-bottom w3-margin-right"></i>VIIT Campus
+                  </p>
+                  <a href="#book" class="w3-btn w3-red w3-margin-top w3-round" style="width: 40%;">
+                    Register
+                  </a>
+             </div>
+             
+         </div>
+
+        </div>
+		 <div class="main">
+       
+        <div class="poster">
+        
+            <h2>Guests</h2>
+        
+        <div class="poster-main">
+          <div class="poster-list">
+             <img src="https://techstory.in/wp-content/uploads/2020/12/arvind-krishna-the-man-who-helped-buy-red-hat-now-wears-the-ceo-hat-at-ibm.jpg" loading="lazy" alt="Photo by Taylor | Unsplash"/>
+             <div class="poster-text">
+            
+                 <center><h3 style ="color:white"> Arvind Krishna(IBM) 
+                </h3></center>
+              
+             </div>
+          </div>
+          <div class="poster-list">
+            <img src="https://www.europeanceo.com/wp-content/uploads/2015/12/Sergio-Ermotti-ubs.jpg" loading="lazy" alt="Photo by hafizh armynazrie | Unsplash"/>
+            <div class="poster-text">
+              <center><h3 style ="color:white">Sergio Ermotti(UBS)
+                </h3></center>
+            </div>
+          </div>
+          <div class="poster-list">
+            <img src="https://www.womleadmag.com/wp-content/uploads/2020/09/Jensen-Huang-size.jpg" loading="lazy" alt="Photo by Obafemi Moyosade | Unsplash"/>
+            <div class="poster-text">
+               <center><h3 style ="color:white">Jensen Huang(Nvidia) 
+                </h3></center>
+            </div>
+          </div>
+		<hr size ="3"  noshade>
+        <div class="main">
+       
+        <div class="poster">
+        
+            <h2>Clubs</h2>
+        
+        <div class="poster-main">
+          <div class="poster-list">
+             <img src="https://www.stopstalk.com/stopstalk/static/images/codechef_logo.png?_rev=20190825132327" loading="lazy" alt="Photo by Taylor | Unsplash"/>
+             <div class="poster-text">
+            
+                 <center><h3>  Codechef-IT 
+                </h3></center>
+              
+             </div>
+          </div>
+          <div class="poster-list">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210702175749/20210702175652.gif" loading="lazy" alt="Photo by hafizh armynazrie | Unsplash"/>
+            <div class="poster-text">
+              <center><h3 style ="color:green">  GeeksForGeeks-IT 
+                </h3></center>
+            </div>
+          </div>
+          <div class="poster-list">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.NZH9SYFK2vQ5xTLeVN2nYQHaHa&pid=Api&P=0" loading="lazy" alt="Photo by Obafemi Moyosade | Unsplash"/>
+            <div class="poster-text">
+               <center><h3 style ="color:white"> ITSF-IT 
+                </h3></center>
+            </div>
+          </div>
+          <div class="poster-list">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.L6qA-RXK55P1xIXRZs7geQHaHa&pid=Api&P=0" loading="lazy" alt="Photo by Joshua Hanson | Unsplash"/>
+            <div class="poster-text">
+        
+               <center><h3 style ="color:darkblue">  VIIT-ACM 
+                </h3></center>
+             
+            </div>
+         </div>
+         <div class="poster-list">
+          <img src="https://media-exp1.licdn.com/dms/image/C510BAQHMS64_P0T_kg/company-logo_200_200/0/1565114764461?e=2159024400&v=beta&t=j1m8iVY-_iKO_czmwYTD3ZugKyxNiqfYXudkfIHS4Y0" loading="lazy" alt="Photo by Thiago Borrere Alvim | Unsplash"/>
+          <div class="poster-text">
+         
+             <center><h3 style ="color:white"> WEC
+                </h3></center>
+           
+          </div>
+       </div>
+       <div class="poster-list">
+        <img src="https://yt3.ggpht.com/a/AATXAJxUZ1kcgcljSjdyvbd1En0BzVhLb9VJNSKalA=s900-c-k-c0xffffffff-no-rj-mo" loading="lazy" alt="Photo by Music HQ | Unsplash"/>
+        <div class="poster-text">
+       
+          <center><h3 style ="color:white"> EDC
+                </h3></center>
+         
+        </div>
+     </div>
+
+        </div>
+        </div>
+        <div class="sponsor"> 
+          <div class="title">
+            <h2>sponsors</h2>
+        </div> 
+
+          <div class="sponsor-main">
+            <div class="sponsor-image">
+              <img src="https://tse2.mm.bing.net/th?id=OIP.dkP0_2i-cVvQEFA6hY5IPAHaEK&pid=Api&P=0"  loading="lazy" alt="--"/>
+                   
+            </div>
+            <div class="sponsor-image">
+              <img src="https://g.foolcdn.com/editorial/images/541536/ibm_logo_blue60_cmyk.jpg" loading="lazy" alt="W3Schools"/>
+            </div>
+            <div class="sponsor-image">
+              <img src="https://tse1.mm.bing.net/th?id=OIP.acXfEyrGty1j6g8jmaZnmgHaFw&pid=Api&P=0" loading="lazy" alt="W3Schools"/>
+  
+            </div>
+            <div class="sponsor-image">
+              <img src="https://tse4.mm.bing.net/th?id=OIP.XSSREoGOe7KmpsQGM_ciZQHaFP&pid=Api&P=0" loading="lazy" alt="W3Schools"/>
+  
+            </div>
+            
+            
+          </div>
+        </div>
+
+        <div class="ticket" id="ticket">
+        
+            <h2>Book Seats </h2>
+    
+        <div class="ticket-main">
+             <div class="ticket-list ticket-pro">
+               <h4 class="ticket-header">Faculty</h4>
+               <div class="ticket-icon">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.ln5wa-mu0CO0zXD9K586XwHaHa&pid=Api&P=0" loading="lazy" alt="vip-card"/>
+              </div>
+              <br><Br>
+              <a href="#book" class="w3-btn w3-red w3-margin-top w3-round" style="width: 100%;">
+
+                Book Seat
+              </a>
+                <div class="ticket-price">
+                  <p>1.</p>
+                </div>
+             </div>
+             <div class="ticket-list ">
+               <h4 class="ticket-header">
+                 Students
+               </h4>
+               <div class="ticket-icon">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.ln5wa-mu0CO0zXD9K586XwHaHa&pid=Api&P=0" loading="lazy" alt="family"/>
+              </div>
+              <br><Br>
+              <a href="#book" class="w3-btn w3-red w3-margin-top w3-round" style="width: 100%;">
+
+                Book Seat
+              </a>
+              <div class="ticket-price">
+                <p>2.</p>
+              </div>
+             </div>
+             <div class="ticket-list">
+               <h4 class="ticket-header">Alumini</h4>
+               <div class="ticket-icon">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.ln5wa-mu0CO0zXD9K586XwHaHa&pid=Api&P=0" loading="lazy" alt="guarantee"/>
+              </div>
+             <br><Br>
+              <a href="#book" class="w3-btn w3-red w3-margin-top w3-round" style="width: 100%;">
+
+                Book Seat
+              </a>
+              <div class="ticket-price">
+                <p>3.</p>
+              </div>
+             </div>
+        </div>
+                    
+        </div>
+        
+       <div class="buy-ticket" id="book">
+      
+          <h2>Register</h2>
+      
+       
+      
+      <div class="buy-ticket-main">
+
+        <div class="buy-ticket-image"> 
+              <img src="https://getmyuni.azureedge.net/college-images-test/viit-college-of-technology-management-bulandshahr/521db4f6f39d4696a7eff9968e59791b.jpeg" loading="lazy"  alt="Photo by Vidar Nordli-Mathisen | Unsplash"/>
+        </div>
+        <div class="buy-ticket-form">
+          <p>Please fill this form, we will send your digital ticket to your email address</p>
+          <form>
+            <div>
+            <label for="fname">Full name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Full Name">
+            
+          </div>
+            <label for="Email">Email</label>
+            <br>
+            <input type="Email" id="email" name="Emial" placeholder="example@something.com"><br>
+            <div>
+              <label for="cars">Choose  type:</label>
+              <select>
+                <option value="vip" class="option">Club-Members</option>
+                <option value="family"class="option">Faculty</option>
+                <option value="Reserved"class="option">Students</option>
+            
+              </select>
+            </div>
+            <button class="w3-btn w3-red  w3-round" style="width: 50%; margin-top: 75px;">Submit</button>
+          </form> 
+        </div>
+      </div>
+
+       </div>
+      </div>
+    </main>
+    <div class="w3-padding w3-center" style="background: black;padding: 10px 0px !important; color:black; ">
+     
+      </div>
+    
+    </div>
+</body>
+</html>
